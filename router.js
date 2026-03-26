@@ -27,7 +27,7 @@ router.post("/decrypt", (req, res) => {
     const decryptedMessage = decrypt(
       encryptedMessage,
       Buffer.from(key, "hex"),
-      iv
+      iv,
     );
     res.json({ decryptedMessage });
   } catch (error) {
